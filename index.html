@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <style>
+    body{
+        background-color: rgba(0, 124, 128, 0.685);
+    }
+
+        #btn{
+            padding: 4rem;
+            padding-left: 4rem;
+            padding-right: 5rem;
+            font-size: 3rem;
+        
+        }
+        #btn{
+            display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid red;
+  color:var(--red);
+  cursor: pointer;
+  font-size: 3.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 9rem;
+        }      
+#btn::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:black;
+  transition: .3s linear;
+  z-index: -1;
+}
+
+#btn:hover::before{
+  width:100%;
+  left: 0;
+}
+
+#btn:hover{
+  color:#fff;
+}
+
+    </style>
+</head>
+<body>
+    <h1>click the button</h1>
+    <button id="btn" onclick = "myFunction()"></button>
+    <h1 class="demo"></h1>
+    
+   
+  <script> 
+/*var sum=1;//factorial
+        for(var i=1; i<5; i++){
+    sum = sum+(i*sum);
+    console.log(sum);}
+    
+
+    /*var sum=0;
+        for(var i=0; i<=10; i++){
+    sum = sum+(2*i);
+    console.log(sum);
+        }*/
+
+     
+
+/*var friends = ["Roshan","swag","don","bhai"];
+for(var i=0; i<friends.length; i++){
+    console.log("Hello friends , " + friends[i]);
+}
+
+var num = prompt("Enter a table :")
+for(var i=1; i<=10; i++){
+  var table = num*i;
+  document.write("<br>");
+  document.write(table);
+   document.write("<br>");
+  */
+ // var num = alert("your are best ");(){
+    /* function myfunction(){
+    var a=4,b=5 //sum 0f natural number
+        sum = a+b;
+    console.log(sum);*/
+        
+ /*var t = new Date();
+ console.log("<h1>" + new Date().toLocaleDateString() + "</h1>");*/
+
+function myFunction (){
+ (function (){
+     setInterval(()=>{
+  var d = new Date().toLocaleTimeString();
+  document.getElementById("btn").innerHTML = d;
+     } , 1000)
+ })();
+}
+  //document.getElementById("demo").innerHTML =sum;
+  //  }
+    </script>
+</body>
+</html>
